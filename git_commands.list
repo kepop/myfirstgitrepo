@@ -1,0 +1,17 @@
+618  cat .gitignore 
+  619  git init
+  620  git status
+  621  git add *
+  622  git status
+  624  git status
+  625  git commit -m "Initial Commit"
+  628  ll .git
+  629  cd .git
+  643  git s
+  644  git status
+  646  git status
+  647  git branch
+  648  git checkout -b 'branch_1'
+  649  git branch
+  650  git status
+  654  h | grep git
