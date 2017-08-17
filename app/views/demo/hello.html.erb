@@ -1,0 +1,32 @@
+<h1>Demo#hello</h1>
+<p>Hello World!! - From Hello Template </p>
+
+
+<%= 1+1 %>
+<br />
+
+<% target = "world" %>
+<%= "Hello #{target}" %>
+
+<% 3.times do %>
+  <br>
+  <%= "xxx" %>
+<% end %>
+
+<% @array.each do |n| %>
+  <br>
+  <%= n %>
+<% end %>	 
+<br>  
+
+<a href='/demo/index'>Link To Index Page - 01 - HTML Styled Link </a> <br>
+<%= link_to('Link to Index Page - 02 - RAILS Styled Link', {:controller => 'demo', :action => 'index'} ) %>
+
+<p> Data from controller </p>
+ID: <%= params[:id] %> <br>
+ID: <%= @id %><br>
+PAGE: <%= @page %><br>
+NEXT PAGE: <%= @page + 1 %><br>
+<hr>
+<%= params.inspect %>
+

@@ -1,0 +1,14 @@
+<h1>Demo#index</h1>
+<p>Hello World!! - From Index Template </p>
+
+<a href='/demo/hello'>Link to Hello Page - 01 - HTML Styled Link </a> <br>
+<%= link_to('Link to Hello Page - 02 - RAILS Styled Link', {:controller => 'demo', :action => 'hello'} ) %>
+
+<br>
+<%= link_to('URL with params', {:controller => 'demo', :action => 'hello', :id => 1, :page => 5} ) %>
+<br>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('Javascript!'); return true;") %>
+<br>
+
+<%= javascript_tag('jsRoar("Rails");') %>

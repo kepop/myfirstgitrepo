@@ -1,0 +1,55 @@
+<!-- 
+  * number_to_currency
+* number_to_percentage
+* number_with_precision /number_to_rounded
+* number_with_delimiter / number_to_delimited
+* number_to_human
+* number_to_human_size 
+* number_to_phone
+--> 
+
+
+<% @n1 = 34.5 %>
+<% @n2 = 34.5587687 %>
+<% @n3 = 12345667889.0 %>
+<% @n4 = 2048 * 2048%>
+<% @n5 = 1112223333 %>
+
+<h2>number_to_currency</h2>
+Orig = <%= @n1 %>  //  New = <%= number_to_currency(@n1) %> <br>
+Orig = <%= @n1 %>  //  New = <%= number_to_currency(@n1, :precision =>0, :unit => 'KR', :format => "%n %u") %>
+<hr>
+
+<h2>number_to_percentage</h2>
+Orig = <%= @n1 %>  //  New = <%= number_to_percentage(@n1) %> <br>
+Orig = <%= @n1 %>  //  New = <%= number_to_percentage(@n1, :precision =>2, :delimiter => "_") %>
+<hr>
+
+<h2>number_with_precision</h2>
+Orig = <%= @n2 %>  //  New = <%= number_with_precision(@n2) %> <br>
+Orig = <%= @n2 %>  //  New = <%= number_with_precision(@n2, :precision =>4) %>
+<hr>
+
+<h2>number_with_delimiter</h2>
+Orig = <%= @n3 %>  //  New = <%= number_with_delimiter(@n3) %> <br>
+Orig = <%= @n3 %>  //  New = <%= number_with_delimiter(@n3, :delimter =>"_") %>
+<hr>
+
+<h2>number_to_human</h2>
+Orig = <%= @n3 %>  //  New = <%= number_to_human(@n3) %> <br>
+Orig = <%= @n3 %>  //  New = <%= number_to_human(@n3, :delimter =>"_", :precision => 4) %><br>
+Orig = <%= @n3 %>  //  New = <%= number_to_human(@n3, :delimter =>",", :precision => 6) %>
+<hr>
+
+<h2>number_to_human_size</h2>
+Orig = <%= @n4 %>  //  New = <%= number_to_human_size(@n4) %> <br>
+Orig = <%= @n4 %>  //  New = <%= number_to_human_size(@n4, :delimter =>"_", :precision => 4) %><br>
+Orig = <%= @n4 %>  //  New = <%= number_to_human_size(@n4, :delimter =>",", :precision => 6) %>
+<hr>
+
+<h2>number_to_phone</h2>
+Orig = <%= @n5 %>  //  New = <%= number_to_phone(@n5) %> <br>
+Orig = <%= @n5 %>  //  New = <%= number_to_phone(@n5, :area_code => true, :delimter => ' ', :country_code => 1, :extension => 999) %><br>
+Orig = <%= @n5 %>  //  New = <%= number_to_phone(@n5, :area_code => false, :delimter => '-', :country_code => 1, :extension => 999) %><br>
+
+<hr>
